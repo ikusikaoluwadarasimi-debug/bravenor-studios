@@ -1,0 +1,292 @@
+
+
+
+body {
+    background-color: #101010;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    border-bottom: 1px solid #333;
+}
+
+nav h2 {
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 130px 20px;
+}
+
+.hero-tag {
+    color: #999;
+    letter-spacing: 4px;
+    font-size: 12px;
+}
+
+.hero h1 {
+    font-size: 65px;
+    line-height: 1.2;
+    margin: 25px 0;
+}
+
+.hero h1 span {
+    display: block;
+    color: #aaa;
+}
+
+.hero-description {
+    color: #aaa;
+    font-size: 18px;
+    max-width: 600px;
+    margin: 20px auto 35px;
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.hero-buttons a {
+    padding: 15px 25px;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: white;
+    color: black;
+}
+
+.btn-secondary {
+    border: 1px solid white;
+    color: white;
+}
+
+.services {
+    padding: 90px 60px;
+    text-align: center;
+    background: #151515;
+}
+
+.section-tag {
+    color: #999;
+    letter-spacing: 4px;
+    font-size: 12px;
+}
+
+.services h2 {
+    font-size: 38px;
+    margin-bottom: 45px;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background: #202020;
+    border: 1px solid #333;
+    padding: 35px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    border-color: white;
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    font-size: 21px;
+}
+
+.service-card p {
+    color: #aaa;
+    line-height: 1.7;
+}
+
+/* Mobile responsive design */
+
+@media (max-width: 768px) {
+
+    nav {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 90px 20px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .services {
+        padding: 60px 20px;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 25px;
+    }
+
+    .hero-buttons {
+        flex-wrap: wrap;
+    }
+}
+
+.about {
+    padding: 100px 60px;
+    text-align: center;
+    background: #101010;
+}
+
+.about h2 {
+    font-size: 38px;
+    margin-bottom: 25px;
+}
+
+.about-text {
+    max-width: 750px;
+    margin: auto;
+    color: #aaa;
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 70px 20px;
+    }
+
+    .about h2 {
+        font-size: 30px;
+    }
+
+    .about-text {
+        font-size: 16px;
+    }
+}
+
+.contact {
+    padding: 100px 20px;
+    text-align: center;
+    background: #202020;
+}
+
+.contact h2 {
+    font-size: 38px;
+    margin: 25px 0;
+}
+
+.contact p {
+    color: #aaa;
+    font-size: 17px;
+}
+
+.contact-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 30px;
+    background: white;
+    color: black;
+    text-decoration: none;
+}
+
+.contact-button:hover {
+    background: #ccc;
+}
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background: #101010;
+    border-top: 1px solid #333;
+}
+
+footer p {
+    color: #888;
+    font-size: 13px;
+}
+
+@media (max-width: 768px) {
+    .contact h2 {
+        font-size: 28px;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation hover effect */
+nav a {
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #999;
+}
+
+/* Button hover animations */
+.hero-buttons a,
+.contact-button {
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #bbb;
+    transform: translateY(-3px);
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: black;
+    transform: translateY(-3px);
+}
+
+.contact-button:hover {
+    background: #bbb;
+    transform: translateY(-3px);
+}
