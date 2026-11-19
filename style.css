@@ -8,6 +8,7 @@ body {
     margin: 0;
 }
 
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -32,8 +33,14 @@ nav ul {
 nav a {
     color: white;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
+nav a:hover {
+    color: #aaa;
+}
+
+/* HERO SECTION */
 .hero {
     text-align: center;
     padding: 130px 20px;
@@ -73,7 +80,9 @@ nav a {
 .hero-buttons a {
     padding: 15px 25px;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
+
 
 .btn-primary {
     background: white;
@@ -101,7 +110,13 @@ nav a {
     font-size: 38px;
     margin-bottom: 45px;
 }
-
+.services-description {
+    color: #999;
+    font-size: 16px;
+    max-width: 550px;
+    line-height: 1.7;
+    margin: -25px auto 45px;
+}
 .service-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -109,11 +124,13 @@ nav a {
 }
 
 .service-card {
-    background: #202020;
+    background: linear-gradient(145deg, #202020, #171717);
     border: 1px solid #333;
-    padding: 35px;
+    padding: 40px;
     text-align: left;
-    transition: 0.3s;
+    transition: all 0.35s ease;
+    border-radius: 5px;
+    min-height: 150px;
 }
 
 .service-card:hover {
@@ -182,16 +199,18 @@ nav a {
 }
 
 .about h2 {
-    font-size: 38px;
-    margin-bottom: 25px;
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
 }
 
 .about-text {
     max-width: 750px;
     margin: auto;
     color: #aaa;
-    font-size: 18px;
-    line-height: 1.9;
+    font-size: 17px;
+    line-height: 2;
 }
 
 @media (max-width: 768px) {
@@ -215,22 +234,30 @@ nav a {
 }
 
 .contact h2 {
-    font-size: 38px;
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: -1px;
     margin: 25px 0;
 }
 
 .contact p {
     color: #aaa;
     font-size: 17px;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .contact-button {
     display: inline-block;
-    margin-top: 25px;
-    padding: 15px 30px;
+    margin-top: 35px;
+    padding: 17px 32px;
     background: white;
     color: black;
     text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
 }
 
 .contact-button:hover {
@@ -290,6 +317,7 @@ nav a:hover {
     background: #bbb;
     transform: translateY(-3px);
 }
+
 /* BRAVENOR STUDIOS - PREMIUM FINISH */
 
 body {
@@ -339,4 +367,133 @@ body {
     font-weight: bold;
     letter-spacing: 1px;
     border-radius: 3px;
+}
+.service-number {
+    display: block;
+    color: #888;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.service-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.4s ease;
+}
+
+.service-card:hover::after {
+    width: 100%;
+}
+.service-card h3 {
+    color: #f5f5f5;
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.service-card p {
+    color: #999;
+    font-size: 15px;
+    line-height: 1.8;
+}
+.service-icon {
+    font-size: 30px;
+    color: #d0d0d0;
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: translateY(-4px);
+}
+.footer-content {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.footer-content h3 {
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+
+.footer-content h3 span {
+    color: #888;
+}
+
+.footer-content > p {
+    color: #999;
+}
+
+.footer-line {
+    height: 1px;
+    background: #333;
+    margin: 25px 0;
+}
+
+footer .copyright {
+    font-size: 12px;
+    color: #777;
+}
+
+/* CONTACT ENQUIRY FORM */
+
+.contact-form {
+    max-width: 600px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 17px;
+    background: #151515;
+    border: 1px solid #383838;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: #aaa;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 17px;
+    background: white;
+    color: black;
+    border: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #bbb;
+    transform: translateY(-3px);
 }
